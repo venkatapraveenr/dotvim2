@@ -1,0 +1,16 @@
+mv .vimrc ~/.vim/vimrc
+mv .gvimrc ~/.vim/gvimrc
+
+ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/gvimrc ~/.gvimrc
+
+cd ~/.vim
+git init
+git add .
+git commit -m "Initial commit"
+git config --global user.name "Your Name Here"
+git config --global user.email "your_email@example.com"
+git remote add origin https://github.com/username/Hello-World.git
+git push -u origin master
+
+
