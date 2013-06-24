@@ -13,4 +13,14 @@ git config --global user.email "your_email@example.com"
 git remote add origin https://github.com/username/Hello-World.git
 git push -u origin master
 
+1. download pathogen.vim and put it in vimfiles/autoload dir
+2. git submodule add <git web path> bundle/<localname>
+3. git add .
+git commit -m "Comment"
+git push
+    >>>>>>>> git pull in other machines where you want it.
+    >>>>>>>> git log will show u the log, but the files are not downloaded
+    >>>>>>>> git submodule init will register these modules
+    >>>>>>>> git submodule update to download the data
+
 
