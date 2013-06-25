@@ -1,6 +1,3 @@
-[submodule "bundle/systemverilog"]
-	path = bundle/systemverilog
-	url = https://github.com/vim-scripts/systemverilog.vim
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim
@@ -28,3 +25,9 @@
 [submodule "bundle/AutoCompl"]
 	path = bundle/AutoCompl
 	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule "bundle/verilog_systemverilog"]
+	path = bundle/verilog_systemverilog
+	url = https://github.com/vim-scripts/verilog_systemverilog.vim
+[submodule "bundle/vim-addon-mw-utils2"]
+	path = bundle/vim-addon-mw-utils2
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
