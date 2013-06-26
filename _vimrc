@@ -4,9 +4,16 @@
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
 
-"Call pathogen to invoke plugins
-call pathogen#infect()
+" Load pathogen, then switch off the filetype and switch it on again to load the 
+" plugins properly
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+filetype off
+syntax on
+filetype plugin indent on
+"Call pathogen to invoke plugins
+"call pathogen#infect()
+"call pathogen#helptags()
 
 "set gfn=Courier_New:h12:cANSI 
 "THEME, FONT
