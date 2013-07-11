@@ -142,3 +142,45 @@ endfunction
 
 " for snipmate
 ":filetype plugin on
+
+" Open GVIM in maximize mode always.
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=999 columns=999
+endif
+
+"Command to open a file in 2 splits as continuous pages
+"Problems - (1) If the cursor is in the last line when the mapping is executed, the mapping fails because j cannot move the cursor down (and the 
+"remaining commands are not executed). (2)Register z is changed.
+:noremap <silent> <Leader>vs :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
+":<C-u>              " clear command line (if in visual mode)
+"let @z=&so          " save scrolloff in register z
+":set so=0 noscb     " set scrolloff to 0 and clear scrollbind
+":bo vs              " split window vertically, new window on right
+"Ljzt                " jump to bottom of window + 1, scroll to top
+":setl scb           " setlocal scrollbind in right window
+"<C-w>p              " jump to previous window
+":setl scb           " setlocal scrollbind in left window
+":let &so=@z         " restore scrolloff
+
+let g:tagbar_type_verilog_systemverilog = {
+    \ 'ctagstype' : 'verilog_systemverilog',
+    \ 'kinds' : [
+        \ 'c:classes',
+        \ 't:tasks',
+        \ 'm:modules',
+        \ 'p:programs',
+        \ 'i:interfaces',
+        \ 'e:typedefs',
+        \ 'f:functions'
+    \]
+\}
+"    \ 'sro' : '::',
+"    \ 'kind2scope' : {
+"        \ 'c' : 'class'
+"    \},
+"    \ 'scope2kind' : {
+"        \ 'class' : 'c'
+"    \}
+
