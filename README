@@ -1,26 +1,58 @@
-mv .vimrc ~/.vim/vimrc
-mv .gvimrc ~/.vim/gvimrc
+Help on linking files in Linux
+==============================
+    mv .vimrc ~/.vim/vimrc
+    mv .gvimrc ~/.vim/gvimrc
 
-ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/gvimrc ~/.gvimrc
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/gvimrc ~/.gvimrc
 
-cd ~/.vim
-git init
-git add .
-git commit -m "Initial commit"
-git config --global user.name "Your Name Here"
-git config --global user.email "your_email@example.com"
-git remote add origin https://github.com/username/Hello-World.git
-git push -u origin master
+Help on git commits
+==================
+1. Git initialization
+    git init
+    git add .
+    git commit -m "Initial commit"
+    git config --global user.name "Your Name Here"
+    git config --global user.email "your_email@example.com"
+    git remote add origin https://github.com/username/Hello-World.git
+    git push -u origin master
 
-1. download pathogen.vim and put it in vimfiles/autoload dir
-2. git submodule add <git web path> bundle/<localname>
-3. git add .
-git commit -m "Comment"
-git push
-    >>>>>>>> git pull in other machines where you want it.
-    >>>>>>>> git log will show u the log, but the files are not downloaded
-    >>>>>>>> git submodule init will register these modules
-    >>>>>>>> git submodule update to download the data
+2. How to add a new plugin into git dirs... 
+    a. download pathogen.vim and put it in vimfiles/autoload dir
+    b. git submodule add <git web path> bundle/<localname>
+    c. git add .
+    d. git commit -m "Comment"
+    e. git push
+
+3. Below are the list of commands to make a commit and push it to the git repository.
+    a. git add .
+    b. git commit -m "Comment"
+    c. git push
+
+4. How to download the changes/new files from repository.
+    a. git pull [in other machines where you want it.]
+    b. git log [will show u the log, but the files are not downloaded]
+    c. git submodule init [will register these modules]
+    d. git submodule [update to download the data]
+
+Help on Ctags
+=============
+
+1. Place the .ctags file in $HOME directory
+2. Copy the following lines in the vimrc
+
+    let g:tagbar_type_verilog_systemverilog = {
+        \ 'ctagstype' : 'verilog_systemverilog',
+        \ 'kinds' : [
+            \ 'c:classes',
+            \ 't:tasks',
+            \ 'm:modules',
+            \ 'p:programs',
+            \ 'i:interfaces',
+            \ 'e:typedefs',
+            \ 'f:functions'
+        \]
+    \}
+
 
 
