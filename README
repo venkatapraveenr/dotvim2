@@ -33,7 +33,7 @@ Help on git commits
     a. git pull [in other machines where you want it.]
     b. git log [will show u the log, but the files are not downloaded]
     c. git submodule init [will register these modules]
-    d. git submodule [update to download the data]
+    d. git submodule update [to download the data]
 
 Help on Ctags
 =============
